@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Relations</title>
+    <link rel='stylesheet' href='relation.css'>
+    <script src='raphael.js'></script>
+    <script src='underscore.js'></script>
+    <script src='jquery-1.9.1.min.js'></script>
+    <script src='relation.js'></script>
+</head>
+
+<body>
+    <div id='svg-view'></div>
+    <script>
+    $(function () {
+        var json = {
+            'id': '0', 'title': 'A', 'childNodes': [
+                { 'id': '1', 'title': 'B', 'parent': '0', 'childNodes': [
+                        { 'id': '7', 'title': 'C', 'parent': '1', 'childNodes': [] },
+                        { 'id': '8', 'title': 'D', 'parent': '1', 'childNodes': [] }
+                    ]
+                },
+                { 'id': '2', 'title': 'E', 'parent': '0', 'childNodes': [] },
+                { 'id': '3', 'title': 'F', 'parent': '0', 'childNodes': [] },
+                { 'id': '4', 'title': 'G', 'parent': '0', 'childNodes': [] },
+                { 'id': '6', 'title': 'H', 'parent': '0', 'childNodes': [
+                        { 'id': '9', 'title': 'I', 'parent': '6', 'childNodes': [] },
+                        { 'id': '10', 'title': 'K', 'parent': '6', 'childNodes': [] }
+                    ]
+                }
+            ]
+        };
+  
+        var info = {
+            '0-1':  ['hello', 'world'],
+            '0-3':  'AAA'
+        };
+        var relation = new Relation(json, info, { wrap:  '#svg-view' });
+    })
+  </script>
+</body>
+</html>

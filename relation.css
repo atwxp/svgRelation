@@ -1,0 +1,54 @@
+.rel-panel {
+    position: absolute;
+    border: 1px solid #94CFF6;
+}
+
+.rel-panel:before,
+.rel-panel:after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-width: 41px 20px 41px 0;
+    border-color: transparent #fff transparent transparent;
+    border-style: dashed solid dashed dashed;
+}
+
+.rel-panel:before {
+      border-color: transparent #94CFF6 transparent transparent;
+      left: -21px;
+}
+
+.rel-content {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 72px;
+    padding: 5px 30px 5px 10px;
+
+    background: #fff;
+    color: #707070;
+    font-size: 12px;
+}
+
+.rel-content .item {
+    display: block;
+    font-size: 12px;
+    line-height: 24px;
+    color: #707070;
+    
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rel-close {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+
+    cursor: pointer;
+}
