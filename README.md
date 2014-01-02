@@ -63,6 +63,9 @@ svgRelation图表
 + rel对象存储这两个节点的关系，key是两个关系节点的id，以`-`连接起来，即`id-id`；value可以是数组或者单个字符串，是数组的话，每一个元素为一条关系，最多显示3条关系；单个字符串表示只有一条关系。
 
 ##Demo
+
+戳[这里](http://atwxp.github.io/svgRelation/relation.html)
+
 这里要引入三个库：`jquery.js`，`raphael.js`，`underscore.js`。此外，还有一个`relation.js`和`relation.css`
 
 ###HTML
